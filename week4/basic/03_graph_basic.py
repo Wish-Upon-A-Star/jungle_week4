@@ -42,6 +42,21 @@ def create_graph(vertices, edges, directed=False):
     """
     # TODO: 빈 그래프 초기화
     pass
+    graph={}
+    for i in range(vertices):
+        graph[i]=[]
+
+    if directed==False:
+        for i in edges:
+            graph[i[0]].append(i[1])
+            graph[i[1]].append(i[0])
+    else:
+        for i in edges:
+            graph[i[0]].append(i[1])
+
+
+        
+
     
     # TODO: 간선 추가
     ## 간선 추가 (u에서 v로)
